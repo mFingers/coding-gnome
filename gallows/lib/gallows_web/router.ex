@@ -16,7 +16,9 @@ defmodule GallowsWeb.Router do
   scope "/hangman", GallowsWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", HangmanController, :new_game # REST--> should keep as :index
+    get  "/", HangmanController, :index
+    post "/", HangmanController, :new_game
+    put  "/", HangmanController, :make_move
   end
 
   # Other scopes may use custom stacks.
