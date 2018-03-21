@@ -1,4 +1,4 @@
-defmodule GallowsWeb.PageControllerTest do
+defmodule GallowsWeb.HangmanControllerTest do
   use GallowsWeb.ConnCase
 
   test "GET /", %{conn: conn} do
