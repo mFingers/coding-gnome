@@ -6,6 +6,10 @@
   Word so far: <%= join(@tally.letters) %>
 </p>
 
+<p>
+  Letters used: <%= join(@tally.used |> MapSet.to_list) %>
+</p>
+
 <%= if game_over?(@tally) do %>
   <%= new_game_button(@conn) %>
 <% else %>
