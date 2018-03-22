@@ -9,6 +9,11 @@ defmodule Gallows.Views.Helpers.GameStateHelper do
     :already_used => { :info, "You already guessed that" },
   }
 
+  def game_state({ :lost, word }) do
+    { class, msg } = @responses[:lost]
+    { class, (msg <> " the word is #{word}") } |> alert
+  end
+
   def game_state(state) do
     @responses[state] |> alert
   end
